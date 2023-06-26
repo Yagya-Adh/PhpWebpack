@@ -1,5 +1,5 @@
 <?php
-require_once './vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 use Yagya\Webpack\Web;
 use Yagya\Webpack\package\Resturant;
