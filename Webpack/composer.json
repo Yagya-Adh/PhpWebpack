@@ -1,0 +1,15 @@
+{
+    "name": "yagya/webpack",
+    "autoload": {
+        "psr-4": {
+            "Yagya\\Webpack\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yagya-Adh",
+            "email": "yagyaadhikari02@gmail.com"
+        }
+    ],
+    "require": {}
+}
