@@ -1,0 +1,202 @@
+ require __DIR__ . '../../vendor/autoload.php';
+
+ /* Trait is use for shareing multiple inheritance */
+ // echo "Hello World";
+
+ trait t1
+ {
+ public function fun1()
+ {
+ echo "trait1 fun1";
+ }
+ }
+
+ trait t2
+ {
+ public function fun2()
+ {
+ echo "trait2 fun2";
+ }
+ }
+
+
+ class Class1
+ {
+ use t1, t2;
+
+ public function funClass1()
+ {
+ echo "<h1> Trait is use for shareing multiple inheritance from parents directly to required child member.</h1>";
+ }
+ }
+
+
+ $ob = new Class1();
+ echo $ob->funClass1() . " <br />";
+ echo $ob->fun1() . "<br />";
+ echo $ob->fun2() . "<br />";
+
+
+ /* Interface */
+
+ interface Parent1
+ {
+ public function childfun();
+ }
+
+
+ class Child implements Parent1
+ {
+
+ public function childfun()
+ {
+ echo "<h1>PHP develop interface, to utilize polymorphism.</h1>";
+ }
+ }
+
+ class ChildTwo implements Parent1
+ {
+
+ public function childfun()
+ {
+ echo "<h2> I am using Interfaces </h2>";
+ }
+ }
+
+
+ $child = new Child();
+ echo $child->childfun();
+
+
+ $chailtwo = new ChildTwo;
+ echo $chailtwo->childfun();
+
+
+
+ /* Abstract Class */
+
+
+ abstract class Task
+ {
+ abstract public function implement();
+ abstract public function task();
+ }
+
+
+ class Walk extends Task
+ {
+ public function implement()
+ {
+ echo "<h1> Abstract Class is use for multiple inheritance in OOPS PHP.</h1>";
+ echo "<h2> Abstract class is defined as abstract and, Abstrace class has atleast one abstract method.</h2>";
+ }
+
+ public function task()
+ {
+ echo "walking";
+ }
+ }
+
+ class Eat extends Task
+ {
+ public function implement()
+ {
+ echo "";
+ }
+
+
+ public function task()
+ {
+ echo "eating";
+ }
+ }
+
+
+
+ $walk = new Walk;
+ $walk->implement();
+ $walk->task();
+ echo "<br />";
+
+ $eat = new Eat;
+ $eat->task();
+
+
+
+
+
+
+
+
+
+ <?php
+
+// echo "Hello";
+/* Facade */
+
+// class Bike
+// {
+//     public function start()
+//     {
+//         return "Staring";
+//     }
+// }
+
+// app()->bind('bike', function () {
+//     return new Bike;
+// });
+
+
+// class Fish
+// {
+
+//     public function swin()
+//     {
+//         return "Swiming";
+//     }
+
+//     public function eat()
+//     {
+//         return "Eating";
+//     }
+// }
+// app()->bind('fish', function () {
+//     return new Fish;
+// });
+
+// class Facade
+// {
+//     public static function __callStatic($name, $arguments)
+//     {
+//         return app()->make(static::getFacadeAccessor())->$name();
+//     }
+
+
+//     protected static function getFacadeAccessor()
+//     {
+//         //
+//     }
+// }
+
+
+// class FishFacade extends Facade
+// {
+
+//     protected static function getFacadeAccessor()
+//     {
+//         return 'fish';
+//     }
+// }
+
+// class BikeFacade extends Facade
+// {
+
+//     protected static function getFacadeAccessor()
+//     {
+//         return 'bike';
+//     }
+// }
+
+
+// dd(FishFacade::eat());
+// dd(BikeFacade::start());
