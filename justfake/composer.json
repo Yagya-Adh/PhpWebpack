@@ -1,0 +1,19 @@
+{
+  "name": "yagya/justfake",
+  "description": "This a random fresh new webpack",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Yagya\\Justfake\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Yagya-Adh",
+      "email": "yagyaadhikari02@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {}
+}
